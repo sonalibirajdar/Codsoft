@@ -1,2 +1,34 @@
 # Codsoft
 Number Guessing Game 
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+int main()
+{
+  srand(time(0));
+  int secretnum= rand()%100+1;
+  
+  int guessnum;
+  int attempts=0;
+   cout<<"****Welcome to number guessing game****"<<endl;
+   cout<<"I've assumed the number between 1 to 100. Now its your turn to guess it"<<endl;
+    do
+  {
+   cout<<"enter the guess no."<<endl;
+   cin>>guessnum;
+   attempts++;
+   if(guessnum<secretnum)
+    {
+    cout<<"tow low!! try again"<<endl;
+    }
+  else if(guessnum>secretnum)
+  {
+    cout<<"tow high try again"<<endl;
+  }
+  else
+  {
+    cout<<"congratulation you guessed correct number in "<<' '<<attempts<<' '<<"attempts"<<endl; 
+  }
+}while(secretnum!=guessnum);
+}
