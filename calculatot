@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+  int a,b,ch,c;
+  char continueChoice;
+ do
+{
+ cout<<"enter the value of a and b"<<endl;
+ cin>>a>>b;
+ cout<<"****operations****"<<endl;
+ cout<<"1.addition\n2.subtraction\n3.multiplication\n4.division"<<endl;
+ cout<<"enter the choice of operation"<<endl;
+ cin>>ch;
+switch(ch)
+{
+case 1:
+ c=a+b;
+ cout<<"the addition of "<<' '<<a<<' '<<b<<' '<<"is"<<' '<<c<<endl;
+ break;
+
+case 2:
+ c=a-b;
+ cout<<"the subtraction of "<<' '<<a<<' '<<b<<' '<<"is"<<' '<<c<<endl;
+ break;
+
+case 3:
+ c=a*b;
+ cout<<"the multiplication of "<<' '<<a<<' '<<b<<' '<<"is"<<' '<<c<<endl;
+ break;
+
+case 4:
+if(b==0)
+{
+cout<<"division is not possible"<<endl;
+}
+ else
+{
+ c=a/b;
+ cout<<"the division of "<<' '<<a<<' '<<b<<' '<<"is"<<' '<<c<<endl;
+ break;
+}
+default:
+ cout<<"INVALD CHOICE PLEASE ENTER CORRECT CHOICE"<<endl;
+}
+
+ cout<<"do you want to continue or not?(y/n)"<<endl;
+ cin>>continueChoice;
+}while(continueChoice=='Y'||continueChoice=='y');
+ cout<<"Goodbye!"<<endl;
+}
